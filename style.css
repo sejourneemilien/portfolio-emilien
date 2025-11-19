@@ -117,7 +117,7 @@ nav a:hover, nav a.active{ color: var(--accent); }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 7rem 0 9rem 0; /* un peu plus de hauteur totale */
+  padding: 7rem 0 9rem 0;
 }
 
 .panel-2 .about {
@@ -136,25 +136,25 @@ nav a:hover, nav a.active{ color: var(--accent); }
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  margin-top: 1.2rem; /* descend le texte globalement */
+  margin-top: 1.2rem;
 }
-/* --- Titre À propos de moi --- */
+
 .panel-2 .text h2 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 3.8rem;     /* taille du texte */
-  font-weight: 400;      /* épaisseur (gras) */
-  margin-bottom: 1rem; /* espace entre le titre et le paragraphe */
-  text-align: center;    /* centre horizontalement le texte */
+  font-size: 3.8rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-align: center;
 }
-/* --- Paragraphe À propos de moi --- */
+
 .panel-2 .text p {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.3rem;     /* taille du texte du paragraphe */
-  line-height: 1.8;       /* espacement vertical entre les lignes */
-  color: #333;            /* couleur du texte */
-  max-width: 600px;       /* limite la largeur du texte pour une meilleure lecture */
-  margin: 0 auto;         /* centre le paragraphe dans le bloc */
-  text-align: center;     /* centre le texte */
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* --- Photo à droite --- */
@@ -165,7 +165,7 @@ nav a:hover, nav a.active{ color: var(--accent); }
 }
 
 .panel-2 .photo img {
-  width: 900px; /* augmente la taille de la photo */
+  width: 900px;
   max-width: 100%;
   height: auto;
   border-radius: 20px;
@@ -174,7 +174,7 @@ nav a:hover, nav a.active{ color: var(--accent); }
 
 /* --- Vidéo sous le texte --- */
 .video-presentation {
-  margin-top: 2.5rem; /* plus d'espace entre le texte et la vidéo */
+  margin-top: 2.5rem;
   text-align: center;
 }
 
@@ -185,29 +185,24 @@ nav a:hover, nav a.active{ color: var(--accent); }
   color: #222;
 }
 
-/* Conteneur de la vidéo YouTube */
-.video-presentation .youtube-container {
-  margin: 0 auto;          /* centre la vidéo sous le texte */
-  width: 100%;
-  max-width: 800px;        /* même largeur max qu'avant */
-  position: relative;
-  padding-bottom: 56.25%;  /* format 16/9 */
-  height: 0;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+/* Conteneur responsive pour la vidéo YouTube */
+.youtube-container {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
 }
 
-/* Iframe YouTube responsive */
-.video-presentation .youtube-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+.youtube-container iframe {
   width: 100%;
-  height: 100%;
-  border: 0;
-  border-radius: 20px;  /* arrondi comme avant */
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  display: block;
+  border: none;
 }
+
+
 
 /* ----- Police manuscrite pour la présentation ----- */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
