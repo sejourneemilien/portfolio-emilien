@@ -1,0 +1,1644 @@
+/* ---------- RESET ----------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #111;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+/* ---------- PALETTE / VARIABLES ----------- */
+:root{
+  --accent: #0072BC;         /* tu peux changer facilement ici */
+  --dark-1: #0e0e0e;
+  --dark-2: #141414;
+  --light: #f4f4f4;          /* section claire */
+  --warm: #e9e7e4;           /* section “activités” */
+}
+
+/* ---------- INTRO CINÉMATIQUE ----------- */
+/* --- INTRO CINÉMATIQUE (avec signature superposée) --- */
+#intro{
+  position: fixed;
+  inset: 0;
+  background:#0e0e0e;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+/* Conteneur signature + texte */
+.sig-wrap{
+  position: relative;
+  display: inline-block;
+}
+
+/* Signature */
+.signature-intro{
+  width: 800px; /* taille de la signature */
+  height: auto;
+  filter: brightness(0) invert(1);
+  display: block;
+}
+
+/* Texte par-dessus la signature */
+.sig-caption {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.5px;
+  opacity: 0;
+}
+
+
+/* ---------- HEADER ----------- */
+header{
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,.9);
+  backdrop-filter: blur(4px);
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+  z-index: 1000;
+}
+nav{
+  display: flex; gap: 36px; padding: 10px 28px;
+}
+nav a{
+  text-decoration: none;
+  color: #333; font-weight: 600; font-size: .98rem;
+  padding: 6px 8px; border-radius: 8px;
+  transition: color .25s ease, background .25s ease;
+}
+nav a:hover, nav a.active{ color: var(--accent); }
+
+/* ---------- PANELS (sections) ----------- */
+#panels{ position: relative; }
+
+.panel{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 100px 8vw 60px; /* marge pour le header */
+  will-change: transform;
+}
+
+/* 1) ACCUEIL */
+.panel-1{
+  background: radial-gradient(1200px 600px at 50% 20%, #1c1c1c, var(--dark-1));
+  color: #fff;
+}
+.panel-1 .hero-text h2{
+  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: .4px;
+  margin-bottom: .35em;
+  text-align: center;
+}
+.panel-1 .hero-text p{
+  text-align: center; opacity: .85;
+}
+
+/* 2) PRÉSENTATION */
+/* ----------- SECTION À PROPOS ----------- */
+.panel-2 {
+  background: var(--warm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7rem 0 9rem 0; /* un peu plus de hauteur totale */
+}
+
+.panel-2 .about {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4rem;
+  width: 85%;
+  max-width: 1400px;
+  align-items: start;
+}
+
+/* --- Texte à gauche --- */
+.panel-2 .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin-top: 1.2rem; /* descend le texte globalement */
+}
+/* --- Titre À propos de moi --- */
+.panel-2 .text h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.8rem;     /* taille du texte */
+  font-weight: 400;      /* épaisseur (gras) */
+  margin-bottom: 1rem; /* espace entre le titre et le paragraphe */
+  text-align: center;    /* centre horizontalement le texte */
+}
+/* --- Paragraphe À propos de moi --- */
+.panel-2 .text p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;     /* taille du texte du paragraphe */
+  line-height: 1.8;       /* espacement vertical entre les lignes */
+  color: #333;            /* couleur du texte */
+  max-width: 600px;       /* limite la largeur du texte pour une meilleure lecture */
+  margin: 0 auto;         /* centre le paragraphe dans le bloc */
+  text-align: center;     /* centre le texte */
+}
+
+/* --- Photo à droite --- */
+.panel-2 .photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel-2 .photo img {
+  width: 900px; /* augmente la taille de la photo */
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Vidéo sous le texte --- */
+.video-presentation {
+  margin-top: 2.5rem; /* plus d'espace entre le texte et la vidéo */
+  text-align: center;
+}
+
+.video-presentation h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+.video-presentation video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+/* ----- Police manuscrite pour la présentation ----- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+
+.handwritten {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+}
+
+/* ----------- 3) ACTIVITÉS ----------- */
+
+.panel-3 {
+  background: var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 0;
+}
+
+.activities-inner {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.activities-inner h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.activities-intro {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  color: #555;
+}
+
+/* Grille des 3 cartes */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+/* Carte cliquable */
+.activity-card {
+  background: #fff;
+  border-radius: 1.3rem;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Effet hover */
+.activity-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 45px rgba(0, 0, 0, 0.18);
+}
+
+.activity-card {
+  overflow: hidden;
+}
+
+.activity-card:hover .activity-image {
+  transform: scale(1.06);
+  transition: transform 0.3s ease;
+}
+
+.activity-image {
+  height: 230px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+
+/* Tu pourras changer les images ici */
+.activity-image.pro {
+  background-image: url("img/activ-pro.JPEG");      
+}
+
+.activity-image.perso {
+  background-image: url("img/activ-perso.PNG");    
+}
+
+.activity-image.acad {
+  background-image: url("img/activ-acad.PNG");     
+}
+
+/* Contenu texte de la carte */
+.activity-content {
+  padding: 2.4rem 2.8rem 2.8rem;
+  text-align: left;
+}
+
+.activity-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+  color: var(--accent); /* ton bleu */
+}
+
+.activity-content p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Petit lien visuel */
+.activity-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* Responsive : en dessous de 960px, on passe à 1 colonne */
+@media (max-width: 960px) {
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-3 {
+    padding: 4rem 0;
+  }
+}
+
+
+/* -------------------- 4) CONTACT -------------------- */
+.panel-4 {
+    background: linear-gradient(160deg, var(--dark-1), var(--dark-2));
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+    position: relative;
+}
+
+.contact-inner {
+    text-align: center;
+}
+
+/* Titre */
+.contact-inner h2 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-size: 3.5rem;  /* augmente la taille */
+    font-weight: 700;
+}
+
+
+/* ------- Icônes de contact ------- */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin: 2rem 0;
+}
+
+.contact-icons .icon {
+    font-size: 2.8rem;
+    color: var(--accent);
+    text-decoration: none;
+    transition: transform .25s ease, color .25s ease;
+    opacity: 0;
+    transform: scale(0.7);
+}
+
+/* Animation */
+.contact-icons .icon:nth-child(1) {
+    animation: fadeZoom 0.6s forwards 0.2s;
+}
+.contact-icons .icon:nth-child(2) {
+    animation: fadeZoom 0.6s forwards 0.35s;
+}
+
+@keyframes fadeZoom {
+    from { opacity: 0; transform: scale(0.6); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Hover */
+.contact-icons .icon:hover {
+    transform: scale(1.2);
+    color: #58c2ff;
+}
+
+/* Petit texte */
+.thanks {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-top: 1rem;
+}
+
+.contact-signature {
+    position: absolute;
+    bottom: 100px;                /* Modifie ici la hauteur */
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: center;    /* ✅ Centre le zoom */
+    width: 500px;
+    opacity: 0.6;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-signature:hover {
+    transform: translateX(-50%) scale(1.10);  /* ✅ Zoom sans bouger */
+    opacity: 0.9;
+}
+
+
+/* ================== PAGE ACTIVITÉS PERSONNELLES ================== */
+
+/* On peut cibler cette page via body.perso-page */
+body.perso-page {
+  background: #fff;
+}
+
+/* On réutilise le même principe de panel (chevauchement) */
+body.perso-page #panels {
+  position: relative;
+}
+
+/* Base commune pour les panels de la page perso */
+body.perso-page .perso-panel {
+  display: grid;
+  place-items: center;
+  padding: 100px 8vw 60px; /* marge pour le header comme sur l'accueil */
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/* ---- Hauteurs et couleurs des 4 parties ---- */
+/* 👉 Tu peux modifier uniquement les height pour changer la taille de chaque partie */
+
+body.perso-page .perso-panel-1 {
+  height: 100vh;          /* change ici pour agrandir/réduire la PARTIE 1 */
+  background: radial-gradient(1200px 600px at 50% 20%, #1c1c1c, var(--dark-1));
+  color: #fff;
+
+  display: block;        /* enlève le centrage imposé par GRID */
+  padding-top: 140px;    /* ajuste la hauteur ici */
+  text-align: center;
+}
+
+
+body.perso-page .perso-panel-2 {
+  height: 120vh;          /* change ici pour la PARTIE 2 */
+  background: var(--light);
+  color: #111;
+}
+
+/* ===== PARTIE 2 : IMPRESSION 3D / P1S ===== */
+
+.perso-panel-2-inner {
+  width: 100%;
+  max-width: 1400px;      /* + large → plus de place pour la photo */
+  margin: -150px auto 0 auto;  /* tu peux garder ce -40px si tu l’aimes bien */
+}
+
+
+
+.p1s-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);  /* plus large à gauche */
+  gap: 4rem;
+  align-items: center;
+}
+
+
+/* Carte photo */
+.p1s-photo-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  padding: 1.8rem;             /* un peu plus de marge interne */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.p1s-photo {
+  width: 100%;          /* prend toute la largeur de la colonne */
+  max-width: 650px;     /* taille réelle max de la photo */
+  border-radius: 1.2rem;
+  display: block;
+  height: auto;
+}
+
+
+
+
+/* Texte */
+.p1s-text {
+  text-align: left;
+}
+
+.p1s-text h2 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.p1s-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 0.9rem;
+}
+
+/* Tags / puces */
+.p1s-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.1rem 0 1.4rem 0;
+  padding: 0;
+}
+
+.p1s-tags li {
+  font-size: 0.9rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: #e3f3ff;
+  color: #12527c;
+}
+
+/* Phrase mise en avant */
+.p1s-highlight {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+}
+
+.p1s-highlight p {
+  font-size: 0.95rem;
+  color: #222;
+  margin: 0;
+}
+
+/* Responsive : sous 900px on empile */
+@media (max-width: 900px) {
+  .p1s-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .perso-panel-2-inner {
+    padding-inline: 1rem;
+  }
+}
+
+.kart-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0 1.4rem 0;
+  padding: 0;
+}
+
+.kart-tags li {
+  font-size: 0.9rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: #e3f3ff;
+  color: #12527c;
+  font-weight: 600;
+  border: 1px solid #b3d8ff;
+}
+
+/* --- Bloc tags kart placé au centre bas de la section 1 --- */
+.kart-tags-wrapper {
+  position: absolute;      /* sort du flux normal */
+  left: 50%;
+  top: 75%;               /* ajuste la hauteur ici (65–70% selon ton goût) */
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  z-index: 20;            /* au-dessus du fond, sous les cartes au pire */
+}
+
+
+/* Liste des tags */
+.kart-tags {
+  list-style: none;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style des tags individuels */
+.kart-tags li {
+  background: #e3f3ff;
+  color: #12527c;
+  font-weight: 600;
+  border-radius: 999px;
+  border: 1px solid #b3d8ff;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.95rem;
+}
+
+
+body.perso-page .perso-panel-3 {
+  height: 100vh;          /* change ici pour la PARTIE 3 */
+  background: var(--warm);
+  color: #111;
+}
+
+/* ===== PARTIE 3 : TRAXXAS MAXX ===== */
+
+.perso-panel-3-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rc-header {
+  text-align: center;
+  margin-top: 3.5rem;     /* + espace sous le menu */
+  margin-bottom: 2.5rem;
+}
+
+
+.rc-header .perso-title {
+  margin-bottom: 0.6rem;
+}
+
+.rc-header .perso-end-note {
+  font-size: 1rem;
+  color: #444;
+}
+
+.rc-header p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.5rem;    /* ← rapproché du haut */
+    margin-bottom: 2rem;   /* ← laisse un peu d'espace avant les cartes */
+}
+
+/* Grille des 3 cartes */
+.rc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.8rem;
+  align-items: stretch;
+  margin-top: 1.5rem;
+}
+/* Forcer 4 cartes par ligne */
+.acad-panel-2 .rc-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Adaptation responsive pour mobile/tablette */
+@media (max-width: 1200px) {
+  .acad-panel-2 .rc-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .acad-panel-2 .rc-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cartes RC */
+.rc-card {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  padding: 1.1rem 1.2rem 1.4rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.rc-photo {
+  width: 100%;
+  border-radius: 0.9rem;
+  display: block;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+/* Empêche l'image de déborder visuellement de la carte */
+.rc-card {
+  overflow: hidden;
+}
+
+/* GROS zoom au survol */
+.rc-card:hover .rc-photo {
+  transform: scale(1.25);             /* tu peux monter à 1.3 si tu veux encore plus */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  cursor: zoom-in;
+}
+
+
+.rc-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0.3rem;
+}
+
+.rc-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Mots-clés RC */
+.rc-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin: 1rem 0 1.2rem 0;   /* espace entre titre et phrase grise */
+  padding: 0;
+}
+
+.rc-tags li {
+  font-size: 0.9rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: #e3f3ff;
+  color: #12527c;
+  font-weight: 600;
+  border: 1px solid #b3d8ff;
+}
+
+/* Responsive : sous 960px, les cartes passent en colonne */
+@media (max-width: 960px) {
+  .rc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .perso-panel-3-inner {
+    padding-inline: 1rem;
+  }
+}
+
+/* Effet zoom sur les images RC */
+.rc-photo {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.rc-photo:hover {
+  transform: scale(1.05);                 /* zoom léger */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* ombre en vol */
+  cursor: zoom-in;
+}
+
+
+body.perso-page .perso-panel-4 {
+  height: 100vh;          /* change ici pour la PARTIE 4 */
+  background: #101318;
+  color: #fff;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.perso-panel-4-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* ===== HEADER TITRE + INTRO KART CROSS ===== */
+.kart-header {
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+}
+
+.kart-header .perso-title {
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.kart-header .perso-intro {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+.perso-end-note {
+    margin-top: 4rem;
+    font-size: 1.1rem;
+    text-align: center;
+    opacity: 0.8;
+    color: #ddd;
+    letter-spacing: 0.5px;
+}
+
+/* ===== LAYOUT SPLIT GAUCHE/DROITE POUR KART CROSS ===== */
+.kart-split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 50% gauche, 50% droite */
+  width: 100%;
+  height: calc(100% - 120px); /* Hauteur restante après le header */
+  gap: 0;
+}
+
+.kart-left,
+.kart-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Déplacement de la carte GAUCHE : plus haut et plus à gauche */
+.kart-left {
+  transform: translate(-100px, -90px); /* -80px = plus à gauche, -70px = plus haut */
+}
+
+/* Déplacement de la carte DROITE : plus haut et plus à droite */
+.kart-right {
+  transform: translate(100px, -90px); /* +50px = vers la droite, -40px = vers le haut */
+}
+
+/* ===== CARTE MENTALE KART CROSS ===== */
+.mindmap {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+  height: 550px;
+}
+
+/* Centre de la carte */
+.mindmap-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, var(--accent), #0056a3);
+  color: white;
+  padding: 1.2rem 2rem;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  font-weight: 700;
+  box-shadow: 0 10px 40px rgba(0, 114, 188, 0.4);
+  z-index: 10;
+  letter-spacing: 1.5px;
+}
+
+/* Conteneur des branches */
+.mindmap-branches {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Chaque branche */
+.mindmap-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(var(--angle)) translateX(var(--distance));
+  z-index: 5;
+  transition: z-index 0s;
+}
+
+.mindmap-item:hover {
+  z-index: 50; /* Passe au-dessus du centre */
+}
+
+/* Ligne de connexion */
+.mindmap-line {
+  position: absolute;
+  width: var(--distance);
+  height: 2px;
+  background: linear-gradient(to right, var(--accent), transparent);
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.mindmap-item:hover .mindmap-line {
+  opacity: 1;
+  background: linear-gradient(to right, var(--accent), rgba(0, 114, 188, 0.5));
+}
+
+/* Carte photo */
+.mindmap-card {
+  transform: rotate(calc(-1 * var(--angle)));
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  width: 160px;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+}
+
+.mindmap-card:hover {
+  transform: rotate(calc(-1 * var(--angle))) scale(1.35);
+  box-shadow: 0 15px 45px rgba(0, 114, 188, 0.3);
+}
+
+/* Image */
+.mindmap-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.mindmap-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Label (toujours visible) */
+.mindmap-label {
+  padding: 0.5rem 1rem 0.5rem 1rem; /* Réduit le padding haut et bas */
+  background: white;
+  display: flex;
+  flex-direction: column; /* Empile verticalement le texte et l'icône */
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #f0f0f0;
+  gap: 0.8rem; /* Encore plus d'espace entre le texte et l'icône */
+}
+
+.mindmap-label span {
+  font-size: 1.1rem; /* Plus gros */
+  font-weight: 600;
+  color: var(--accent); /* Bleu */
+  text-align: center;
+}
+
+.mindmap-label i {
+  font-size: 0.9rem;
+  color: var(--accent);
+  opacity: 0.7;
+  animation: mouseFloat 2s ease-in-out infinite;
+  margin-top: 0.3rem; /* Descend encore l'icône */
+}
+
+@keyframes mouseFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* Texte détaillé (caché par défaut) */
+.mindmap-text {
+  padding: 1rem;
+  background: white;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  border-top: 1px solid #f0f0f0;
+}
+
+.mindmap-card:hover .mindmap-text {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.mindmap-text h4 {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.mindmap-text p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .kart-split-layout {
+    grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+  }
+  
+  .mindmap {
+    max-width: 450px;
+    height: 450px;
+  }
+  
+  .mindmap-item {
+    --distance: 180px !important;
+  }
+  
+  .mindmap-card {
+    width: 140px;
+  }
+  
+  .mindmap-center {
+    font-size: 1.2rem;
+    padding: 1rem 1.8rem;
+  }
+}
+
+
+
+
+
+/* ================== PAGE ACTIVITÉS PROFESSIONNELLES ================== */
+
+/* On peut cibler cette page via body.pro-page */
+body.pro-page {
+  background: #fff;
+}
+
+/* On réutilise le même principe de panel (chevauchement) */
+body.pro-page #panels {
+  position: relative;
+}
+
+/* Base commune pour les panels de la page pro */
+body.pro-page .pro-panel {
+  display: grid;
+  place-items: center;
+  padding: 100px 8vw 60px; /* marge pour le header comme sur l'accueil */
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/* ---- Hauteurs et couleurs des 4 parties ---- */
+
+body.pro-page .pro-panel-1 {
+  height: 100vh;
+  background: radial-gradient(1200px 600px at 50% 20%, #1c1c1c, var(--dark-1));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0 0 0;
+}
+
+body.pro-page .pro-panel-2 {
+  height: auto;                 /* la hauteur s’adapte au contenu */
+  background: var(--light);
+  color: #111;
+  padding: 70px 8vw 80px;       /* un peu moins haut que les autres sections => plus proche du header */
+}
+/* Mise en page spéciale pour la section "Étude des mélanges de caoutchouc" */
+.pro-panel-2 .rc-grid {
+  grid-template-columns: minmax(260px, 1fr) minmax(420px, 1.5fr) minmax(260px, 1fr);
+  align-items: stretch;
+}
+
+/* Carte centrale plus large (tableau d'essais) */
+.pro-panel-2 .rc-card-tableau {
+  max-width: 750px;
+  margin-inline: auto;
+}
+
+.pro-panel-2 .rc-card-tableau .rc-photo {
+  height: 230px;
+  object-fit: cover;   /* pour bien remplir la carte avec le tableau */
+}
+
+/* Texte un peu plus grand sur la carte centrale */
+.pro-panel-2 .rc-card-tableau h3 {
+  font-size: 1.1rem;
+}
+
+.pro-panel-2 .rc-card-tableau p {
+  font-size: 1rem;
+}
+
+/* Responsive : on repasse en pile sur mobile / petites tablettes */
+@media (max-width: 1100px) {
+  .pro-panel-2 .rc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pro-panel-2 .rc-card-tableau {
+    max-width: 100%;
+  }
+}
+/* Agrandir l'image du tableau dans la carte centrale */
+.pro-panel-2 .perso-card img,
+.pro-panel-2 .pro-card img {
+    width: 100%;
+    height: auto !important;
+    object-fit: contain !important;
+}
+/* Carte centrale plus large */
+.pro-panel-2 .pro-big-card {
+    max-width: 850px !important;
+}
+/* ============ PRO PANEL 2 : élargir la section caoutchouc ============ */
+
+/* Conteneur un peu plus large uniquement pour la section 2 pro */
+body.pro-page .pro-panel-2 .perso-panel-3-inner {
+  max-width: 1400px;   /* tu peux monter à 1500 si tu veux encore plus large */
+}
+
+/* Grille : on élargit clairement la colonne centrale */
+.pro-panel-2 .rc-grid {
+  grid-template-columns:
+    minmax(260px, 1fr)
+    minmax(520px, 2fr)  /* ← colonne centrale plus large */
+    minmax(260px, 1fr);
+}
+
+/* Carte centrale (tableau) encore un peu plus large si besoin */
+.pro-panel-2 .rc-card-tableau {
+  max-width: 900px;     /* avant 750px, tu peux ajuster */
+  margin-inline: auto;
+}
+
+/* Image du tableau : on affiche tout, plus haut, sans recadrage */
+.pro-panel-2 .rc-card-tableau .rc-photo {
+  height: auto;           /* plus de hauteur fixe 230px */
+  max-height: 380px;      /* limite la hauteur si besoin */
+  object-fit: contain;    /* on garde tout le tableau dans le cadre */
+}
+/* Centrer le texte dans la carte centrale (tableau) */
+.pro-panel-2 .rc-card-tableau {
+    text-align: center;
+}
+
+.pro-panel-2 .rc-card-tableau p {
+    text-align: center;
+}
+
+.pro-panel-2 .rc-card-tableau h3 {
+    text-align: center;
+}
+
+
+body.pro-page .pro-panel-3 {
+  height: 100vh;
+  background: var(--warm);
+  color: #111;
+}
+
+body.pro-page .pro-panel-4 {
+  height: 100vh;
+  background: #101318;
+  color: #fff;
+}
+
+/* ===== NOUVELLE MISE EN PAGE PRO PANEL 1 ===== */
+
+.pro-title-top {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.pro-split-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  margin-top: -2rem;
+}
+
+/* Moitié GAUCHE : Image avec effet zoom */
+.pro-left-half {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.pro-left-half img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.pro-left-half img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 20px 60px rgba(0, 114, 188, 0.5);
+}
+
+/* Moitié DROITE : Texte centré */
+.pro-right-half {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 4rem;
+}
+
+.pro-intro-text {
+  font-size: 1.55rem;
+  line-height: 2;
+  color: #fff;
+  max-width: 600px;
+  text-align: center;
+}
+
+.pro-intro-text strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .pro-split-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  
+  .pro-left-half img {
+    max-width: 500px;
+  }
+  
+  .pro-intro-text {
+    font-size: 1.3rem;
+  }
+}
+
+/* ======== Navigation spécifique page PRO ======== */
+
+body.pro-page header.sub-header {
+  padding-bottom: 18px;
+}
+
+body.pro-page .subnav-context {
+  margin-top: 6px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+  letter-spacing: 0.03em;
+}
+
+body.pro-page .subnav-context span {
+  margin: 0 4px;
+  opacity: 0.7;
+}
+
+body.pro-page .subnav-context strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+
+
+/* ================== PAGE ACTIVITÉS ACADÉMIQUES ================== */
+
+/* ================== PAGE ACTIVITÉS ACADÉMIQUES — PANEL 1 ================== */
+/* Même logique de mise en page que la partie pro */
+body.acad-page .acad-panel-1 {
+  height: 100vh;
+  background: radial-gradient(1200px 600px at 50% 20%, #1c1c1c, var(--dark-1));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0 0 0;   /* pour laisser la place au menu comme sur la pro */
+}
+/* ================== PAGE ACTIVITÉS ACADÉMIQUES ================== */
+
+/* Même principe que perso/pro */
+body.acad-page {
+  background: #fff;
+}
+
+/* Les panels académiques se chevauchent dans ce conteneur */
+body.acad-page #panels {
+  position: relative;
+}
+
+/* Base commune pour tous les panels académiques */
+body.acad-page .acad-panel {
+  display: grid;
+  place-items: center;
+  padding: 100px 8vw 60px; /* marge pour le header comme sur les autres pages */
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/* ---- Hauteurs et couleurs des parties académiques ---- */
+
+body.acad-page .acad-panel-1 {
+  height: 100vh;  /* plein écran */
+  background: radial-gradient(1200px 600px at 50% 20%, #1c1c1c, var(--dark-1));
+  color: #fff;
+
+  display: flex;          /* comme sur la page pro */
+  flex-direction: column;
+  padding: 100px 0 0 0;   /* laisse la place au menu en haut */
+}
+
+body.acad-page .acad-panel-2 {
+  height: 120vh;
+  background: var(--light);
+  color: #111;
+}
+
+body.acad-page .acad-panel-3 {
+  height: 100vh;
+  background: var(--warm);
+}
+
+body.acad-page .acad-panel-4 {
+  height: 100vh;
+  background: var(--light);
+}
+body.acad-page .acad-panel-5 {
+  height: 100vh;
+  background: var(--warm);
+}
+body.acad-page .acad-panel-6 {
+  height: 100vh;
+  background: #101318;
+}
+
+.acad-title-top {
+  text-align: center;
+  font-size: 5rem;   /* comme .pro-title-top */
+  font-weight: 600;
+  color: #fff;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.acad-split-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  margin-top: -1rem;
+}
+
+/* GAUCHE — PHOTO */
+.acad-left-half {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.acad-left-half img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.acad-left-half img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 20px 60px rgba(0, 114, 188, 0.5);
+}
+
+/* DROITE — TEXTE */
+.acad-right-half {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 4rem;
+}
+
+.acad-intro-text {
+  font-size: 1.55rem;
+  line-height: 2;
+  color: #fff;
+  max-width: 600px;
+  text-align: center;
+}
+
+.acad-intro-text strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .acad-split-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  
+  .acad-left-half img {
+    max-width: 500px;
+  }
+  
+  .acad-intro-text {
+    font-size: 1.3rem;
+  }
+}
+
+
+/* Navigation spécifique aux sous-pages */
+body.acad-page header.sub-header {
+  padding-bottom: 18px;
+}
+
+body.acad-page .subnav-context {
+  margin-top: 6px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+  letter-spacing: .03em;
+}
+
+body.acad-page .subnav-context span { opacity: .7; margin: 0 4px; }
+
+body.acad-page .subnav-context strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Fix : dans les sous-pages “Activités”, garder Activités en bleu */
+.acad-page .sub-header nav a {
+  color: #222 !important;
+}
+
+.acad-page .sub-header nav a[href*="activites"] {
+  color: var(--accent) !important;
+}
+
+/* ======== Navigation spécifique aux sous-pages d'activités ======== */
+
+body.perso-page header.sub-header {
+  padding-bottom: 18px;          /* un peu plus de place pour le sous-texte */
+}
+/* MENU DES SOUS-PAGES (activités perso/pro/acad) */
+.sub-header nav a {
+    color: #222 !important;            /* couleur normale */
+}
+
+.sub-header nav a.active {
+    color: var(--accent) !important;   /* lien actif en bleu */
+}
+
+.sub-header nav a:last-child {
+    color: #222 !important;            /* empêche Contact d'être bleu */
+}
+
+/* ===== Sous-menu Activités (Pro / Perso / Acad) ===== */
+
+.perso-page .subnav-context,
+.pro-page   .subnav-context,
+.acad-page  .subnav-context {
+  margin-top: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: #777;
+  letter-spacing: 0.03em;
+}
+
+.subnav-context span {
+  opacity: 0.6;
+}
+
+.subnav-context .subnav-link {
+  color: #777;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.subnav-context .subnav-link:hover {
+  color: var(--accent);
+}
+
+.subnav-context .subnav-link.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+
+/* ======== ACTIVE FIX POUR LES SOUS-PAGES ======== */
+
+/* Dans les sous-pages : on remet tous les liens en normal */
+.perso-page .sub-header nav a,
+.pro-page   .sub-header nav a,
+.acad-page  .sub-header nav a {
+    color: #222 !important;
+}
+
+/* Dans les sous-pages : ACTIVITÉS est toujours bleu */
+.perso-page .sub-header nav a[href*="activites"],
+.pro-page   .sub-header nav a[href*="activites"],
+.acad-page  .sub-header nav a[href*="activites"] {
+    color: var(--accent) !important;
+}
+
+/* Permettre au contenu d'un panel de défiler */
+.perso-panel-inner {
+  max-height: 100%;
+  overflow-y: auto;      /* scroll vertical activé */
+  padding-bottom: 60px;  /* marge basse pour respirer */
+}
+
+/* Remonter la section Usinage pour qu'elle soit plus proche du bandeau de navigation */
+.acad-panel-2 {
+  padding-top: 1rem !important;   /* avant tu devais être à 8rem ou plus */
+}
+
+/* Remonter aussi le header interne (titre + tags + phrase) */
+.acad-panel-2 .rc-header {
+  margin-top: 0 !important;
+}
+/* Grille 2 cartes pour la partie Fonderie */
+.fonderie-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+  justify-items: center;
+}
+/* Réduction de la taille des cartes pour la partie Fonderie */
+.acad-panel-3 .rc-card {
+  max-width: 420px;        /* largeur contrôlée */
+}
+
+.acad-panel-3 .rc-photo {
+  height: 220px;           /* réduit la hauteur de l’image */
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Centrer les deux cartes dans la grille */
+.fonderie-grid {
+  grid-template-columns: repeat(2, 420px) !important;  /* 2 colonnes fixes, centrées */
+  justify-content: center;
+}
+/* Grille 2 cartes pour la partie Métrologie */
+.metrologie-grid {
+  grid-template-columns: repeat(2, 420px);
+  justify-content: center;
+}
+
+/* Même taille de cartes que la partie Fonderie */
+.acad-panel-4 .rc-card {
+  max-width: 420px;
+}
+
+.acad-panel-4 .rc-photo {
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+/* Grille 3 cartes pour la partie Automobile */
+.auto-grid {
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  justify-content: center;
+}
+
+/* Taille des cartes Automobile */
+.acad-panel-5 .rc-card {
+  max-width: 380px;
+}
+
+.acad-panel-5 .rc-photo {
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+@media (max-width: 1200px) {
+  .auto-grid {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .auto-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Grille 2 cartes pour la partie Robotique */
+.robot-grid {
+  grid-template-columns: repeat(2, 420px);
+  justify-content: center;
+}
+
+/* Taille des cartes Robotique alignée sur Fonderie / Métrologie */
+.acad-panel-6 .rc-card {
+  max-width: 420px;
+}
+
+.acad-panel-6 .rc-photo {
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Titre blanc pour la partie Robotique */
+.acad-panel-6 .perso-title {
+  color: #ffffff !important;
+}
+
+/* Texte gris clair sous le titre */
+.acad-panel-6 .perso-end-note {
+  color: #cccccc !important;
+}
+
+/* Tags légèrement éclaircis */
+.acad-panel-6 .rc-tags li {
+  background: rgba(255, 255, 255, 0.15);
+  color: #e8e8e8;
+}
+
+/* Grille 4 cartes pour la partie 4 PRO (cotation & CAO) */
+.pro-cad-grid {
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  justify-content: center;
+}
+
+/* Responsive : on passe à 2 puis 1 carte par ligne */
+@media (max-width: 1200px) {
+  .pro-cad-grid {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .pro-cad-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Améliorer la lisibilité sur le fond sombre de pro-panel-4 */
+.pro-panel-4 .rc-header .perso-title {
+  color: #ffffff;
+}
+
+.pro-panel-4 .perso-end-note,
+.pro-panel-4 .rc-header p {
+  color: #d0d0d0;
+}

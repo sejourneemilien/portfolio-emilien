@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>
+    try { history.scrollRestoration = "manual"; } catch(e){}
+    if (location.hash) {
+      history.replaceState(null, document.title, location.pathname + location.search);
+    }
+    window.scrollTo(0,0);
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activités personnelles – Émilien</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="perso-page">
+  <div id="site-root">
+
+    <!-- INTRO CINÉMATIQUE (même que l'accueil) -->
+    <div id="intro">
+      <div class="sig-wrap">
+        <img src="signature.png" alt="Signature Émilien Séjourné" class="signature-intro">
+        <span class="sig-caption">Découvrez mes activités personnelles !</span>
+      </div>
+    </div>
+
+    <!-- NAVIGATION (renvoie vers l'index) -->
+    <header class="sub-header">
+      <nav>
+        <a href="index.html#accueil">Accueil</a>
+        <a href="index.html#presentation">Présentation</a>
+        <a href="index.html#activites" class="active">Activités</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <div class="subnav-context">
+      
+
+        <a href="activites-professionnelles.html" class="subnav-link">
+          Professionnelles
+        </a>
+        <span>•</span>
+
+        <a href="activites-personnelles.html" class="subnav-link active">
+          Personnelles
+        </a>
+        <span>•</span>
+
+        <a href="activites-academiques.html" class="subnav-link">
+          Académiques
+        </a>
+      </div>
+    </header>
+
+
+    <!-- PANELS PERSO (4 parties qui se chevauchent) -->
+    <main id="panels">
+
+      <!-- PARTIE 1 -->
+      <section class="panel perso-panel perso-panel-1">
+  
+        <!-- TITRE + INTRO EN HAUT DE PAGE -->
+        <div class="kart-header">
+          <h2 class="perso-title">KART CROSS : Étape N°1 : le châssis</h2>
+          <p class="perso-end-note">Ce n’est que le début d’une longue aventure...</p>
+
+        </div>
+        
+        <!-- LAYOUT GAUCHE/DROITE -->
+        <div class="kart-split-layout">
+          
+          <!-- PARTIE GAUCHE : Carte mentale CONCEPTION -->
+          <div class="kart-left">
+            <div class="mindmap">
+              <div class="mindmap-center">CONCEPTION</div>
+              
+              <div class="mindmap-branches">
+                <!-- Branche 1 - Haut gauche (Version 3) -->
+                <div class="mindmap-item" style="--angle: 45deg; --distance: 220px;">
+                  <div class="mindmap-line"></div>
+                  <div class="mindmap-card">
+                    <img src="img/chassis-v3.png" alt="Chassis Version 3">
+                    <div class="mindmap-label">
+                      <span>Version 3</span>
+                      <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <div class="mindmap-text">
+                      <h4>Version 3 - 2022</h4>
+                      <p>Cette version résout complètement les problèmes de triangulation. Cependant, la hauteur sous plafond était insuffisante.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Branche 2 - Haut droit (Version 4) -->
+                <div class="mindmap-item" style="--angle: 135deg; --distance: 220px;">
+                  <div class="mindmap-line"></div>
+                  <div class="mindmap-card">
+                    <img src="img/chassis-v4.png" alt="Chassis Version 4">
+                    <div class="mindmap-label">
+                      <span>Version 4</span>
+                      <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <div class="mindmap-text">
+                      <h4>Version 4 - 2023</h4>
+                      <p>La hauteur sous plafond a été augmentée pour un confort optimal. Ce châssis est la version la plus aboutie et la version final</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Branche 3 - Bas gauche (maintenant Version 2) -->
+                <div class="mindmap-item" style="--angle: -45deg; --distance: 220px;">
+                  <div class="mindmap-line"></div>
+                  <div class="mindmap-card">
+                    <img src="img/chassis-v2.png" alt="Chassis Version 2">
+                    <div class="mindmap-label">
+                      <span>Version 2</span>
+                      <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <div class="mindmap-text">
+                      <p>Structure plus simple, mais la forme générale du châssis ne me convainquait pas. De plus, la triangulation avant était encore peu pratique à intégrer.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Branche 4 - Bas droit (maintenant Version 1) -->
+                <div class="mindmap-item" style="--angle: -135deg; --distance: 220px;">
+                  <div class="mindmap-line"></div>
+                  <div class="mindmap-card">
+                    <img src="img/chassis-v1.png" alt="Chassis Version 1">
+                    <div class="mindmap-label">
+                      <span>Version 1</span>
+                      <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <div class="mindmap-text">
+                      <p>La géométrie générale était correcte mais la triangulation avant était trop complexe à la réalisation.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+           <!-- PARTIE DROITE : Deuxième carte mentale FABRICATION -->
+          <div class="kart-right">
+            <div class="mindmap">
+              <div class="mindmap-center">FABRICATION</div>
+              <div class="mindmap-branches">
+                
+                <!-- Branche 1 - Haut (0°) -->
+                <div class="mindmap-item" style="--angle: 90deg; --distance: 220px;">
+                  <div class="mindmap-line"></div>
+                  <div class="mindmap-card">
+                    <img src="img/fab-1.JPEG" alt="Étape 1">
+                    <div class="mindmap-label">
+                      <span>Étape 1</span>
+                      <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <div class="mindmap-text">
+                      <p>Réception des tubes d'acier.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Branche 2 - Haut droite (45°) -->
+                <div class="mindmap-item" style="--angle: 135deg; --distance: 220px;">
+                  <div class="mindmap-line"></div>
+                  <div class="mindmap-card">
+                    <img src="img/fab-2.PNG" alt="Étape 2">
+                    <div class="mindmap-label">
+                      <span>Étape 2</span>
+                      <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <div class="mindmap-text">
+                      <p>Découpe précise des tubes aux dimensions définies dans la CAO.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Branche 3 - Droite (90°) -->
+                <div class="mindmap-item" style="--angle: 180deg; --distance: 220px;">
+                  <div class="mindmap-line"></div>
+                  <div class="mindmap-card">
+                    <img src="img/fab-3.PNG" alt="Étape 3">
+                    <div class="mindmap-label">
+                      <span>Étape 3</span>
+                      <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <div class="mindmap-text">
+                      <p>Cintrage des tubes.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Branche 4 - Bas droite (135°) -->
+                <div class="mindmap-item" style="--angle: -135deg; --distance: 220px;">
+                  <div class="mindmap-line"></div>
+                  <div class="mindmap-card">
+                    <img src="img/fab-4.PNG" alt="Étape 4">
+                    <div class="mindmap-label">
+                      <span>Étape 4</span>
+                      <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <div class="mindmap-text">
+                      <p>Meulage des extrémités pour former des gueules de loup et assurer un ajustement parfait au soudage.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Branche 5 - Bas (180°) -->
+                <div class="mindmap-item" style="--angle: -90deg; --distance: 220px;">
+                  <div class="mindmap-line"></div>
+                  <div class="mindmap-card">
+                    <img src="img/fab-5.JPEG" alt="Étape 5">
+                    <div class="mindmap-label">
+                      <span>Étape 5</span>
+                      <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <div class="mindmap-text">
+                      <p>Disposition des premiers tubes au sol pour visualiser l’assemblage avant soudage.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Branche 6 - Bas gauche (225°) -->
+                <div class="mindmap-item" style="--angle: -45deg; --distance: 220px;">
+                  <div class="mindmap-line"></div>
+                  <div class="mindmap-card">
+                    <img src="img/fab-6.JPEG" alt="Étape 6">
+                    <div class="mindmap-label">
+                      <span>Étape 6</span>
+                      <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <div class="mindmap-text">
+                      <p>Assemblage et soudage de la base du châssis, première étape structurante du projet.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Branche 7 - Gauche (270°) -->
+                <div class="mindmap-item" style="--angle: 0deg; --distance: 220px;">
+                  <div class="mindmap-line"></div>
+                  <div class="mindmap-card">
+                    <img src="img/fab-7.PNG" alt="Étape 7">
+                    <div class="mindmap-label">
+                      <span>Étape 7</span>
+                      <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <div class="mindmap-text">
+                      <p>Soudage du haut du châssis après vérification des angles et alignements.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Branche 8 - Haut gauche (315°) -->
+                <div class="mindmap-item" style="--angle: 45deg; --distance: 220px;">
+                  <div class="mindmap-line"></div>
+                  <div class="mindmap-card">
+                    <img src="img/fab-8.JPEG" alt="Étape 8">
+                    <div class="mindmap-label">
+                      <span>Étape 8</span>
+                      <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <div class="mindmap-text">
+                      <p>Châssis complet fini et contrôlé avant peinture et installation des trains roulants.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAGS CENTRÉS EN BAS DE LA SECTION 1 -->
+          <div class="kart-tags-wrapper">
+            <ul class="kart-tags">
+              <li>Conception</li>
+              <li>Innovation</li>
+              <li>Fabrication</li>
+              <li>Autonomie</li>
+            </ul>
+          </div>
+
+      </section>
+
+
+            <!-- PARTIE 2 : Impression 3D -->
+      <section class="panel perso-panel perso-panel-2">
+        <div class="perso-panel-2-inner">
+
+          <div class="p1s-layout">
+
+            <!-- Photo P1S -->
+            <div class="p1s-photo-card">
+              <img src="img/P1S.jpeg" alt="Imprimante 3D Bambu Lab P1S" class="p1s-photo">
+            </div>
+
+            <!-- Texte -->
+            <div class="p1s-text">
+              <h2>Impression 3D – Bambu Lab P1S</h2>
+              <p>
+                En <strong>avril 2025</strong>, j’ai franchi un cap dans ma manière de concevoir 
+                et de fabriquer des pièces en acquérant une <strong>Bambu Lab P1S</strong>. 
+                Plus qu’un simple outil de loisir, cette imprimante 3D est devenue un 
+                <strong>véritable outil de travail</strong> qui me permet de passer très vite 
+                de l’idée au prototype.
+              </p>
+              <p>
+                Grâce à sa vitesse d’impression, à sa fiabilité et à son caisson fermé, 
+                je peux produire aussi bien des <strong>pièces fonctionnelles</strong> pour mon 
+                kart cross, des <strong>accessoires sur mesure</strong> pour mon entourage, 
+                que des supports pédagogiques ou des maquettes en lien avec ma formation en 
+                <strong>Génie Mécanique et Productique</strong>. Chaque projet est l’occasion 
+                de travailler la conception pour la fabrication additive et de mieux comprendre 
+                le comportement des différents matériaux.
+              </p>
+
+              <ul class="p1s-tags">
+                <li>Prototypage rapide</li>
+                <li>Pièces fonctionnelles</li>
+                <li>Accessoires sur mesure</li>
+                <li>Conception pour la fabrication additive</li>
+                <li>Préparation à la vie professionnelle</li>
+              </ul>
+
+              <div class="p1s-highlight">
+                <p>
+                  Aujourd’hui, l’imprimante 3D est devenue pour moi 
+                  <strong>aussi indispensable qu’une clé de 13</strong> dans l’atelier.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+            <!-- PARTIE 3 : Traxxas Maxx -->
+      <section class="panel perso-panel perso-panel-3">
+        <div class="perso-panel-3-inner">
+
+          <!-- Titre + intro -->
+          <div class="rc-header">
+            <h2 class="perso-title">Traxxas Maxx – entretien & préparation</h2>
+            
+            <!-- Mots-clés -->
+          <ul class="rc-tags">
+            <li>Entretien préventif</li>
+            <li>Démontage complet</li>
+            <li>Transmission & différentiel</li>
+            <li>Modélisme RC</li>
+            <li>Fiabilisation</li>
+            <li>Mécanique de précision</li>
+          </ul>
+            
+            <p class="perso-end-note">
+              Une voiture RC qui me permet de mettre les mains dans la mécanique… à l’échelle 1/10.
+            </p>
+          </div>
+
+          <!-- Grille de 3 cartes photo + texte -->
+          <div class="rc-grid">
+
+            <!-- Carte 1 : démontage complet -->
+            <article class="rc-card">
+              <img src="img/IMG_3704.JPEG" alt="Traxxas Maxx démontée en pièces" class="rc-photo">
+              <h3>Démontage complet du châssis</h3>
+              <p>
+                Régulièrement, je démonte entièrement ma Traxxas Maxx : trains roulants, châssis,
+                électronique, visserie… Tout est étalé et trié. Ça me permet de contrôler l’usure,
+                de repérer les pièces fragilisées et de repartir sur une base propre pour les
+                prochaines sessions.
+              </p>
+            </article>
+
+            <!-- Carte 2 : transmission & différentiel -->
+            <article class="rc-card">
+              <img src="img/IMG_3852.JPEG" alt="Différentiel et carter démontés" class="rc-photo">
+              <h3>Transmission & différentiel</h3>
+              <p>
+                Je m’occupe aussi de la partie la plus importante : la transmission. 
+                Ouverture du différentiel, nettoyage, remplacement des carters et contrôle des
+                engrenages. C’est un excellent moyen de comprendre comment se répartit le couple
+                et d’anticiper les pannes.
+              </p>
+            </article>
+
+            <!-- Carte 3 : remontage & fiabilisation -->
+            <article class="rc-card">
+              <img src="img/IMG_3871.JPEG" alt="Traxxas Maxx remontée et prête à rouler" class="rc-photo">
+              <h3>Remontage & fiabilisation</h3>
+              <p>
+                Une fois tout contrôlé, je remonte la voiture en prenant soin de passer les câbles,
+                sécuriser les connecteurs et remplacer les pièces critiques. L’objectif : une Maxx 
+                fiable, prête à encaisser les sauts, tout en restant facile à entretenir pour les
+                futures évolutions.
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- PARTIE 4 : Boîte de vitesses -->
+<section class="panel perso-panel perso-panel-4">
+  <div class="perso-panel-4-inner">
+
+    <!-- Titre + tags + phrase grise -->
+    <div class="rc-header">
+      <h2 class="perso-title">Boîte de vitesses – démontage & analyse</h2>
+
+      <!-- Mots-clés -->
+      <ul class="rc-tags">
+        <li>Boîte de vitesses manuelle</li>
+        <li>Démontage complet</li>
+        <li>Train d’engrenages</li>
+        <li>Lubrification</li>
+        <li>Entretien automobile</li>
+      </ul>
+
+      <p class="perso-end-note">
+        Un exercice concret pour comprendre comment le couple est transmis, réparti et protégé à l’intérieur d’une boîte de vitesses.
+      </p>
+    </div>
+
+    <!-- Grille de cartes (on réutilise le même style que la Traxxas) -->
+    <div class="rc-grid">
+
+      <!-- Carte 1 -->
+      <article class="rc-card">
+        <img src="img/IMG_5681.JPEG" alt="Boîte de vitesses ouverte sur l’établi" class="rc-photo">
+        <h3>Ouverture & première inspection</h3>
+        <p>
+          Avec des amis, nous avons ouvert cette boîte uniquement par curiosité mécanique.
+L’objectif : voir l’intérieur, comprendre l’architecture et observer le fonctionnement des arbres et engrenages.
+        </p>
+      </article>
+
+      <!-- Carte 2 -->
+      <article class="rc-card">
+        <img src="img/IMG_5678.JPEG" alt="Détail des engrenages de la boîte de vitesses" class="rc-photo">
+        <h3>Analyse du train d’engrenages</h3>
+        <p>
+          Une fois le carter retiré, on analyse le train d’engrenages : profil des dents, jeu, alignement, lubrification.
+C’est un excellent moyen de visualiser concrètement comment les rapports s’enchaînent.
+        </p>
+      </article>
+
+      <!-- Carte 3 -->
+      <article class="rc-card">
+        <img src="img/IMG_5679.JPEG" alt="Vue globale de la boîte de vitesses partiellement démontée" class="rc-photo">
+        <h3>Diagnostic & préparation au remontage</h3>
+        <p>
+          En poursuivant le démontage, on examine roulements, arbres et pignons.
+Pas de réparation ici : uniquement comprendre le fonctionnement réel d’une boîte et voir comment le couple circule à travers les différents étages.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+    </main>
+  </div>
+
+  <!-- GSAP + ScrollTrigger + ton script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

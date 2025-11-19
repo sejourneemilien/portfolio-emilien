@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>
+    try { history.scrollRestoration = "manual"; } catch(e){}
+    if (location.hash) {
+      history.replaceState(null, document.title, location.pathname + location.search);
+    }
+    window.scrollTo(0,0);
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activités professionnelles – Émilien</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="pro-page">
+  <div id="site-root">
+
+    <!-- INTRO CINÉMATIQUE (même que l'accueil) -->
+    <div id="intro">
+      <div class="sig-wrap">
+        <img src="signature.png" alt="Signature Émilien Séjourné" class="signature-intro">
+        <span class="sig-caption">Découvrez mes activités professionnelles !</span>
+      </div>
+    </div>
+
+    <!-- NAVIGATION (comme perso, mais libellé pro) -->
+    <header class="sub-header">
+      <nav>
+        <a href="index.html#accueil">Accueil</a>
+        <a href="index.html#presentation">Présentation</a>
+        <a href="index.html#activites" class="active">Activités</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <div class="subnav-context">
+        <a href="activites-professionnelles.html" class="subnav-link active">
+          Professionnelles
+        </a>
+        <span>•</span>
+
+        <a href="activites-personnelles.html" class="subnav-link">
+          Personnelles
+        </a>
+        <span>•</span>
+
+        <a href="activites-academiques.html" class="subnav-link">
+          Académiques
+        </a>
+      </div>
+    </header>
+
+    <!-- PANELS PRO (4 parties qui se chevauchent) -->
+    <main id="panels">
+
+      <!-- PARTIE 1 : Présentation du site Hutchinson -->
+      <section class="panel pro-panel pro-panel-1">
+          
+          <!-- TITRE tout en haut -->
+          <h1 class="pro-title-top">Alternance en R&D – Hutchinson Paulstra</h1>
+
+          <!-- CONTENU 50/50 -->
+          <div class="pro-split-container">
+
+              <!-- MOITIÉ GAUCHE : PHOTO -->
+              <div class="pro-left-half">
+                  <img src="img/activ-pro.JPEG" alt="Centre technique Hutchinson à Châteaudun">
+              </div>
+
+              <!-- MOITIÉ DROITE : TEXTE -->
+              <div class="pro-right-half">
+                  <p class="pro-intro-text">
+                      Depuis <strong>septembre 2023</strong>, j’effectue mon alternance chez Hutchinson Paulstra, au Centre Technique de Châteaudun, dans le cadre de ma formation en <strong>Génie Mécanique et Productique</strong> .
+Intégré à l’équipe R&D Automobile, je participe au développement et à l’analyse de solutions antivibratoires destinées aux motorisations thermiques, hybrides et électriques.
+Cette expérience me permet d’acquérir des compétences en caractérisation matériaux, en gestion de projets techniques et en collaboration avec les différents laboratoires internes.
+                  </p>
+              </div>
+
+          </div>
+          
+      </section>
+
+      <!-- PARTIE 2 -->
+                  <!-- PARTIE 2 : Étude des mélanges de caoutchouc -->
+      <section class="panel pro-panel pro-panel-2">
+        <div class="perso-panel-3-inner">
+
+          <!-- Titre + tags + phrase d'intro -->
+          <div class="rc-header">
+            <h2 class="perso-title">Étude des mélanges de caoutchouc</h2>
+
+            <ul class="rc-tags">
+              <li>Mélanges de caoutchouc</li>
+              <li>Caractérisation</li>
+              <li>Vieillissement</li>
+              <li>Essais d’endurance</li>
+              <li>Autonomie</li>
+            </ul>
+
+            <p class="perso-end-note">
+              Cette étude vise à comparer différents mélanges de caoutchouc sur plusieurs géométries de pièces
+              et à constituer une base de données caractérisation–endurance. Elle doit permettre de répondre plus
+              rapidement aux demandes clients en s’appuyant sur des résultats d’essais déjà capitalisés.
+            </p>
+          </div>
+
+          <!-- 3 cartes : gauche = caractérisation, centre = tableau, droite = endurance -->
+          <div class="rc-grid">
+
+            <!-- Carte gauche : caractérisation -->
+            <article class="rc-card">
+              <img src="img/machine_caract.JPEG" alt="Machine de caractérisation des pièces caoutchouc" class="rc-photo">
+              <h3>Caractérisation des pièces</h3>
+              <p>
+                Les machines de caractérisation permettent de mesurer la <strong>raideur</strong> et
+                le comportement mécanique des pièces pour chaque mélange de caoutchouc.
+                L’objectif est de <strong>comparer les mélanges entre eux</strong> sur une même géométrie
+                afin d’identifier ceux qui offrent le meilleur compromis en fonction de la demande.
+              </p>
+            </article>
+
+            <!-- Carte centrale : tableau d’essais (plus large) -->
+            <article class="rc-card rc-card-tableau">
+              <img src="img/tableau_essais.jpg" alt="Tableau récapitulatif des essais à réaliser" class="rc-photo">
+              <h3>Planification de plus de 1200 essais</h3>
+              <p>
+                Le tableau regroupe l’ensemble des combinaisons pièces / mélanges / conditions à tester :
+                caractérisations, vieillissements, caractérisation post-vieillissements et essais d’endurance.
+                Au total, plus de <strong>1200 essais</strong> sont programmés pour couvrir un large
+                spectre de géométries et de formulations de mélanges.
+              </p>
+            </article>
+
+            <!-- Carte droite : endurance -->
+            <article class="rc-card">
+              <img src="img/banc_dessais.JPEG" alt="Banc d'essais d'endurance pour pièces caoutchouc" class="rc-photo">
+              <h3>Endurance et corrélation avec le calcul</h3>
+              <p>
+                Les pièces sont ensuite testées sur banc d’endurance, avec des cycles sinusoïdaux et
+                des efforts appliqués suivant un ou plusieurs axes. Ce sont sur ces essais que l’on
+                <strong>compare les résultats de calcul</strong> aux mesures réelles, afin de vérifier
+                la pertinence des modèles numériques et la tenue en service des pièces.
+              </p>
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+     
+      <!-- PARTIE 3 : Développement de supports moteur STLA-S -->
+      <section class="panel pro-panel pro-panel-3">
+        <div class="perso-panel-3-inner">
+
+          <!-- Titre + tags + phrase grise -->
+          <div class="rc-header">
+            <h2 class="perso-title">Plateforme STLA-S – Développement et validation des supports moteur</h2>
+
+            <ul class="rc-tags">
+              <li>Stellantis</li>
+              <li>Plateforme STLA-S</li>
+              <li>Supports moteur</li>
+              <li>Essais d’emmanchement</li>
+              <li>Essais de couple & rupture</li>
+            </ul>
+
+            <p class="perso-end-note">
+              En R&amp;D chez Hutchinson Paulstra, je participe au développement et à la validation des futurs supports moteur destinés à la nouvelle plateforme STLA-S de Stellantis.  
+              Ces essais permettent d’assurer la tenue mécanique, la sécurité et la conformité au cahier des charges client.
+            </p>
+          </div>
+
+          <!-- 3 cartes -->
+          <div class="rc-grid">
+
+            <!-- Carte 1 -->
+            <article class="rc-card">
+              <img src="img/Fiat_500e.jpg" alt="Fiat 500e - véhicule STLA-S" class="rc-photo">
+              <h3>Essais d’emmanchement / démanchement</h3>
+              <p>
+                Je participe aux essais d’emmanchement et de démanchement des supports moteur : 
+                mesure des efforts, contrôle des jeux, comportement des interfaces métal/élastomère.
+                Ces essais garantissent un montage fiable et répétable en usine.
+              </p>
+            </article>
+
+            <!-- Carte 2 -->
+            <article class="rc-card">
+              <img src="img/opel_corsa-e.jpg" alt="Opel Corsa-e" class="rc-photo">
+              <h3>Essais de couple de serrage</h3>
+              <p>
+                Les supports moteur sont soumis à des couples de serrage précis.  
+                Je réalise les essais demandés par Stellantis : 
+                validation des couples nominaux, contrôles après serrage, étude de la déformation.
+              </p>
+            </article>
+
+            <!-- Carte 3 -->
+            <article class="rc-card">
+              <img src="img/Peugeot_e208.jpg" alt="Peugeot e-208" class="rc-photo">
+              <h3>Essais de rupture & tenue mécanique</h3>
+              <p>
+                Des essais destructifs sont conduits pour vérifier la résistance maximale du support : 
+                charge progressive, suivi des déformations, analyse de la rupture.  
+                Ces tests permettent d’assurer la sécurité sur véhicule réel.
+              </p>
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- PARTIE 4 -->
+            <!-- PARTIE 4 : Cotation de plans & modélisation 3D -->
+      <section class="panel pro-panel pro-panel-4">
+        <div class="perso-panel-4-inner">
+
+          <!-- Titre + tags + phrase grise -->
+          <div class="rc-header">
+            <h2 class="perso-title">Cotation de plans & modélisation 3D de pièces</h2>
+
+            <ul class="rc-tags">
+              <li>CATIA V5</li>
+              <li>Cotation ISO</li>
+              <li>Tolérances géométriques</li>
+              <li>Pièces élastomères</li>
+              <li>Hutchinson Paulstra</li>
+            </ul>
+
+            <p class="perso-end-note">
+              En R&amp;D, je participe à la modélisation 3D et à la cotation de pièces anti-vibratoires
+              pour différents clients automobiles, afin de garantir à la fois la fonction et la
+              fabricabilité des produits.
+            </p>
+          </div>
+
+          <!-- Grille 4 cartes -->
+          <div class="rc-grid pro-cad-grid">
+
+            <!-- Carte 1 : Modélisation d'un silentbloc -->
+            <article class="rc-card">
+              <img src="img/bush1.jpg" alt="Modélisation 3D d’un silentbloc en CAO" class="rc-photo">
+              <h3>Modélisation 3D d’un silentbloc</h3>
+              <p>
+                Modélisation d’un silentbloc en CAO : prise en compte de la géométrie caoutchouc/métal,
+                des zones de surmoulage et des interfaces avec le châssis. Cette étape permet de préparer
+                les futures simulations et la mise en plan.
+              </p>
+            </article>
+
+            <!-- Carte 2 : Optimisation de la géométrie -->
+            <article class="rc-card">
+              <img src="img/bush3.jpg" alt="Vue 3D d’un insert ou d’un support antivibratoire" class="rc-photo">
+              <h3>Optimisation de la géométrie</h3>
+              <p>
+                Ajustement de la géométrie pour répondre au cahier des charges client : encombrement,
+                interfaces, zones de fixation. Le modèle 3D sert de base aux échanges avec les
+                concepteurs et aux validations internes.
+              </p>
+            </article>
+
+            <!-- Carte 3 : Cotation d’un plan client -->
+            <article class="rc-card">
+              <img src="img/plan_ineos.jpg" alt="Plan coté d’une pièce client avec tolérances" class="rc-photo">
+              <h3>Cotation de plans</h3>
+              <p>
+                Mise en plan et cotation fonctionnelle suivant les spécifications du client
+                 : dimensions clés, référentiels, tolérances géométriques.
+                L’objectif est d’assurer la bonne fonction de la pièce et la maîtrise de la fabrication.
+              </p>
+            </article>
+
+            <!-- Carte 4 : Support spécifique modélisé -->
+            <article class="rc-card">
+              <img src="img/support_extincteur.jpg" alt="Modélisation 3D d’un support spécifique" class="rc-photo">
+              <h3>Conception de supports spécifiques</h3>
+              <p>
+                Modélisation 3D de supports dédiés (ici un support d’extincteur) pour des besoins
+                internes ou clients. Ce travail mêle contraintes fonctionnelles, ergonomie
+                et possibilités industrielles.
+              </p>
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+
+    </main>
+  </div>
+
+  <!-- GSAP + ScrollTrigger (comme sur perso) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

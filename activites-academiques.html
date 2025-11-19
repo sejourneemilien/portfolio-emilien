@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>
+    /* Toujours revenir en haut en masquant le hash */
+    try { history.scrollRestoration = "manual"; } catch(e){}
+    if (location.hash) {
+      history.replaceState(null, document.title, location.pathname + location.search);
+    }
+    window.scrollTo(0,0);
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activités académiques – Émilien</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="acad-page">
+  <div id="site-root">
+
+    <!-- INTRO CINÉMATIQUE (même que l'accueil) -->
+    <div id="intro">
+      <div class="sig-wrap">
+        <img src="signature.png" alt="Signature Émilien Séjourné" class="signature-intro">
+        <span class="sig-caption">Découvrez mes activités académiques !</span>
+      </div>
+    </div>
+
+    <!-- NAVIGATION (renvoie vers l’index) -->
+    <header class="sub-header">
+        <nav>
+            <a href="index.html#accueil">Accueil</a>
+            <a href="index.html#presentation">Présentation</a>
+            <a href="index.html#activites" class="active">Activités</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="subnav-context">
+      
+
+        <a href="activites-professionnelles.html" class="subnav-link">
+          Professionnelles
+        </a>
+        <span>•</span>
+
+        <a href="activites-personnelles.html" class="subnav-link">
+          Personnelles
+        </a>
+        <span>•</span>
+
+        <a href="activites-academiques.html" class="subnav-link active">
+          Académiques
+        </a>
+      </div>
+    </header>
+
+
+    <!-- PANELS ACADÉMIQUES (4 sections qui se chevauchent) -->
+    <main id="panels">
+
+      <!-- PARTIE 1 -->
+      <section class="panel acad-panel acad-panel-1">
+
+          <!-- TITRE centré en haut -->
+          <h1 class="acad-title-top">Ma formation à l'IUT</h1>
+
+          <!-- CONTENU 50/50 (image gauche / texte droite) -->
+          <div class="acad-split-container">
+
+              <!-- GAUCHE : PHOTO (image de l'IUT) -->
+              <div class="acad-left-half">
+                  <img src="img/activ-acad.PNG" alt="IUT d'Orléans - Site de Châteaudun">
+              </div>
+
+              <!-- DROITE : TEXTE DESCRIPTION -->
+              <div class="acad-right-half">
+                  <p class="acad-intro-text">
+                      J’étudie au sein de l’<strong>IUT d’Orléans – département GMP</strong>, 
+                      une formation centrée sur la conception, la fabrication, et la gestion de projets industriels.
+                      <br><br>
+                      Cette formation me permet de développer des compétences solides en <strong>CAO</strong>,
+                      en <strong>méthodes de production</strong>, en <strong>prototypage</strong> ainsi qu’en
+                      <strong>management de projet</strong>, tout en alternant avec mon activité professionnelle chez Hutchinson.
+                  </p>
+              </div>
+
+          </div>
+      </section>
+
+
+      <!-- PARTIE 2 -->
+            <!-- PARTIE 2 : Usinage -->
+      <section class="panel acad-panel acad-panel-2">
+        <div class="perso-panel-4-inner">
+
+          <!-- Titre + tags + phrase grise (même structure que la boîte de vitesses) -->
+          <div class="rc-header">
+            <h2 class="perso-title">Usinage – du traditionnel à la commande numérique</h2>
+
+            <!-- Mots-clés -->
+            <ul class="rc-tags">
+              <li>Tournage</li>
+              <li>Fraisage</li>
+              <li>Commande numérique</li>
+              <li>Machines conventionnelles</li>
+              <li>Atelier GMP</li>
+            </ul>
+
+            <p class="perso-end-note">
+              Un environnement d’usinage complet qui me permet de passer des machines traditionnelles aux centres CN,
+              et de mettre en pratique les cours de technologie de fabrication.
+            </p>
+          </div>
+
+          <!-- Grille de cartes (même style que la partie boîte de vitesses) -->
+          <div class="rc-grid">
+
+            <!-- Carte 1 : centre d’usinage CN -->
+            <article class="rc-card">
+              <img src="img/hardinge.JPEG" alt="Centre d’usinage Hardinge VMC 600II" class="rc-photo">
+              <h3>Centre d’usinage CN</h3>
+              <p>
+                Le centre d’usinage <strong>Hardinge VMC 600II</strong> permet de réaliser des opérations
+                de fraisage 3 axes pilotées par commande numérique : dressage, surfaçage, perçages précis,
+                alésages… C’est sur ce type de machine que l’on applique concrètement les parcours d’outils
+                vus en cours.
+              </p>
+            </article>
+
+            <!-- Carte 2 : tours CN -->
+            <article class="rc-card">
+              <img src="img/ecoturn.JPEG" alt="Tour à commande numérique Ecoturn" class="rc-photo">
+              <h3>Tour à commande numérique</h3>
+              <p>
+                Le tour CN permet de programmer des cycles de tournage complets : ébauche, finition, gorges,
+                chanfreins, filetages… On y travaille la logique ISO, l’optimisation des passes et la répétabilité
+                des pièces produites.
+              </p>
+            </article>
+
+            <!-- Carte 3 : banc de tours traditionnels -->
+            <article class="rc-card">
+              <img src="img/tours_tradi.JPEG" alt="Banc de tours conventionnels dans l’atelier" class="rc-photo">
+              <h3>Tours traditionnels</h3>
+              <p>
+                Les tours conventionnels servent à acquérir les bases : prise de pièce, choix des vitesses de coupe,
+                orientation des outils, lecture des verniers. C’est indispensable pour comprendre ce que fait
+                réellement la machine derrière un programme CN.
+              </p>
+            </article>
+
+            <!-- Carte 4 : fraiseuses et rectifieuses -->
+            <article class="rc-card">
+              <img src="img/fraiseuse_tradi.JPEG" alt="Fraiseuses et rectifieuses traditionnelles" class="rc-photo">
+              <h3>Fraiseuses & rectifieuses</h3>
+              <p>
+                Les fraiseuses et rectifieuses traditionnelles permettent de travailler la précision :
+                planéité, équerrage, états de surface. Elles complètent parfaitement la formation en montrant
+                les limites et les avantages de chaque type de procédé.
+              </p>
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- PARTIE 3 -->
+      <!-- PARTIE 3 : Fonderie -->
+<section class="panel acad-panel acad-panel-3">
+  <div class="perso-panel-4-inner">
+
+    <!-- Titre + tags + phrase grise -->
+    <div class="rc-header">
+      <h2 class="perso-title">Fonderie – Comprendre la transformation du métal</h2>
+
+      <ul class="rc-tags">
+        <li>Moulage</li>
+        <li>Fusion</li>
+        <li>Alliages</li>
+        <li>Procédés</li>
+        <li>Atelier GMP</li>
+      </ul>
+
+      <p class="perso-end-note">
+        La fonderie permet de transformer le métal à l’état liquide pour créer des formes complexes,
+        tout en découvrant les contraintes thermiques liées au refroidissement.
+      </p>
+    </div>
+
+    <!-- Grille 2 cartes -->
+    <div class="rc-grid fonderie-grid">
+
+      <!-- Carte 1 : Fusion du métal -->
+      <article class="rc-card">
+        <img src="img/fonderie.jpg" alt="Fusion et coulée du métal en atelier" class="rc-photo">
+        <h3>Fusion et coulée du métal</h3>
+        <p>
+          Le métal est chauffé dans un creuset jusqu'à devenir liquide, puis versé dans le moule en sable.
+          Une étape impressionnante qui montre l’importance de la température, de la fluidité
+          et de la vitesse de coulée pour obtenir une pièce correcte.
+        </p>
+      </article>
+
+      <!-- Carte 2 : Pièce obtenue -->
+      <article class="rc-card">
+        <img src="img/fonderie2.JPEG" alt="Pièce brute issue du moulage" class="rc-photo">
+        <h3>Pièce issue du moulage</h3>
+        <p>
+          Après refroidissement, la pièce est démoulée : elle présente des bavures, des traces
+          du système d’attaque et parfois des défauts. Cette étape permet de comprendre
+          les limites du procédé et l’importance du contrôle matière.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+      <!-- PARTIE 4 -->
+            <!-- PARTIE 4 : Métrologie -->
+      <section class="panel acad-panel acad-panel-4">
+        <div class="perso-panel-4-inner">
+
+          <!-- Titre + tags + phrase grise -->
+          <div class="rc-header">
+            <h2 class="perso-title">Métrologie – mesurer pour garantir la qualité</h2>
+
+            <ul class="rc-tags">
+              <li>Contrôle dimensionnel</li>
+              <li>MMT</li>
+              <li>Pied à coulisse</li>
+              <li>Micromètre</li>
+              <li>Cales étalon</li>
+            </ul>
+
+            <p class="perso-end-note">
+              La métrologie est au cœur de la validation d’une pièce : elle relie la conception, la fabrication
+              et le contrôle qualité à travers des mesures fiables et traçables.
+            </p>
+          </div>
+
+          <!-- Grille 2 cartes -->
+          <div class="rc-grid metrologie-grid">
+
+            <!-- Carte 1 : Machine à mesurer tridimensionnelle -->
+            <article class="rc-card">
+              <img src="img/metrologie2.jpg" alt="Machine à mesurer tridimensionnelle en salle de métrologie" class="rc-photo">
+              <h3>Machine à mesurer tridimensionnelle (MMT)</h3>
+              <p>
+                La MMT permet de contrôler des géométries complexes en 3D grâce à un palpeur qui vient
+                mesurer différents points de la pièce. On peut ainsi vérifier des tolérances serrées
+                et comparer directement les mesures au modèle CAO.
+              </p>
+            </article>
+
+            <!-- Carte 2 : Instruments de mesure manuels -->
+            <article class="rc-card">
+              <img src="img/metrologie1.jpeg" alt="Pied à coulisse, micromètre et cales étalon" class="rc-photo">
+              <h3>Instruments de mesure manuels</h3>
+              <p>
+                Pied à coulisse, micromètre et cales étalon permettent de réaliser des contrôles dimensionnels
+                rapides et précis. Ils sont indispensables pour vérifier des cotes simples en atelier
+                et comprendre la notion d’incertitude de mesure.
+              </p>
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- PARTIE 5 -->
+            <!-- PARTIE 5 : Automobile -->
+      <section class="panel acad-panel acad-panel-5">
+        <div class="perso-panel-4-inner">
+
+          <!-- Titre + tags + phrase grise -->
+          <div class="rc-header">
+            <h2 class="perso-title">Automobile – du diagnostic aux essais</h2>
+
+            <ul class="rc-tags">
+              <li>Diagnostic</li>
+              <li>Maintenance</li>
+              <li>Véhicules pédagogiques</li>
+              <li>Banc d’essai</li>
+              <li>Atelier auto GMP</li>
+            </ul>
+
+            <p class="perso-end-note">
+              L’atelier automobile permet de mettre en pratique la mécanique des véhicules,
+              du diagnostic en baie jusqu’aux essais sur banc, sur des supports pédagogiques variés.
+            </p>
+          </div>
+
+                    <!-- Grille 3 cartes -->
+          <div class="rc-grid auto-grid">
+
+            <!-- Carte 1 : Diagnostic sur véhicule -->
+            <article class="rc-card">
+              <img src="img/auto3.JPEG" alt="Véhicule pédagogique GMP sur pont élévateur" class="rc-photo">
+              <h3>Diagnostic en atelier</h3>
+              <p>
+                Les véhicules sont placés en baie de diagnostic pour réaliser des contrôles
+                mécaniques et électroniques : lecture de défauts, mesures, essais de fonctionnement…
+                L’objectif est de relier les symptômes aux systèmes mécatroniques concernés.
+              </p>
+            </article>
+
+            <!-- Carte 2 : Véhicule pédagogique GMP -->
+            <article class="rc-card">
+              <img src="img/auto1.JPEG" alt="Véhicule sur banc d’essai AUTOSCAN" class="rc-photo">
+              <h3>Véhicule pédagogique GMP</h3>
+              <p>
+                Le véhicule GMP sert de support aux travaux pratiques : démontages partiels,
+                mesures, essais sur pont élévateur. Il permet de visualiser concrètement
+                l’implantation des organes mécaniques et des liaisons au sol.
+              </p>
+            </article>
+
+            <!-- Carte 3 : Essais sur banc roulant -->
+            <article class="rc-card">
+              <img src="img/auto2.JPEG" alt="Véhicule en baie avec capot ouvert" class="rc-photo">
+              <h3>Essais sur banc roulant</h3>
+              <p>
+                Le banc AUTOSCAN permet de réaliser des essais de freinage, de puissance et de
+                comportement du véhicule. C’est un outil essentiel pour relier les mesures
+                (forces, couple, freinage) aux notions vues en dynamique du véhicule.
+              </p>
+            </article>
+
+          </div> <!-- fin .rc-grid -->
+        </div>   <!-- fin .perso-panel-4-inner -->
+      </section> <!-- fin .acad-panel-5 -->
+
+    <!-- PARTIE 6 -->
+        <!-- PARTIE 6 : Robotique -->
+    <section class="panel acad-panel acad-panel-6">
+      <div class="perso-panel-4-inner">
+
+        <!-- Titre + tags + phrase grise -->
+        <div class="rc-header">
+          <h2 class="perso-title">Robotique – manipuler et programmer des robots</h2>
+
+          <ul class="rc-tags">
+            <li>Robot collaboratif</li>
+            <li>Robot didactique</li>
+            <li>Programmation</li>
+            <li>Automatisation</li>
+            <li>Atelier robotique</li>
+          </ul>
+
+          <p class="perso-end-note">
+            La robotique permet de lier la mécanique, l’électronique et l’informatique pour automatiser
+            des tâches de manipulation, tout en intégrant les notions de sécurité et de collaboration homme–robot.
+          </p>
+        </div>
+
+        <!-- Grille 2 cartes -->
+        <div class="rc-grid robot-grid">
+
+          <!-- Carte 1 : Bras Niryo -->
+          <article class="rc-card">
+            <img src="img/robot1.JPEG" alt="Bras robotisé didactique Niryo" class="rc-photo">
+            <h3>Bras robotisé didactique</h3>
+            <p>
+              Le bras Niryo est utilisé pour découvrir la programmation de trajectoires simples :
+              prise de pièces, dépôts, répétition de cycles. Il permet de comprendre la cinématique
+              d’un robot et les bases de la programmation par blocs ou par script.
+            </p>
+          </article>
+
+          <!-- Carte 2 : Robot collaboratif ABB -->
+          <article class="rc-card">
+            <img src="img/robot2.JPEG" alt="Robot collaboratif ABB à deux bras" class="rc-photo">
+            <h3>Robot collaboratif ABB</h3>
+            <p>
+              Le robot collaboratif ABB, à deux bras, permet de simuler des opérations d’assemblage
+              ou de contrôle. On y aborde la sécurité, le travail en zone partagée et la programmation
+              de tâches plus complexes en environnement industriel.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+  <!-- GSAP + ScrollTrigger + TON SCRIPT -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

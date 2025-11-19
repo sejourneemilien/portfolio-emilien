@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>
+    try { history.scrollRestoration = "manual"; } catch(e){}
+    if (location.hash) {
+      history.replaceState(null, document.title, location.pathname + location.search);
+    }
+    // dès le head, on remonte
+    window.scrollTo(0,0);
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon site – Émilien</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div id="site-root">
+
+    <!-- INTRO CINÉMATIQUE -->
+    <div id="intro">
+      <div class="sig-wrap">
+        <img src="signature.png" alt="Signature Émilien Séjourné" class="signature-intro">
+        <span class="sig-caption">Passionné de mécanique</span>
+      </div>
+    </div>
+
+
+    <!-- NAVIGATION -->
+    <header>
+      <nav>
+        <a href="#" data-target="accueil">Accueil</a>
+        <a href="#" data-target="presentation">Présentation</a>
+        <a href="#" data-target="activites">Activités</a>
+        <a href="#" data-target="contact">Contact</a>
+
+      </nav>
+    </header>
+
+    <!-- PANELS (sections superposées) -->
+    <main id="panels">
+      <!-- 1. ACCUEIL -->
+      <section id="accueil" class="panel panel-1">
+        <div class="hero-text">
+          <h2>Concevoir. Créer. Innover.</h2>
+          <p>Découvrez mon univers ... </p>
+        </div>
+      </section>
+
+      <!-- 2. PRÉSENTATION -->
+      <section id="presentation" class="panel panel-2">
+        <div class="about">
+          <div class="text">
+            <h2 class="handwritten-title">Qui suis-je ?</h2>
+
+            <p class="handwritten">
+                Je m'appelle <strong>Emilien Séjourné</strong> et je suis <strong>passionné</strong> par la 
+                <strong>conception mécanique</strong> et les <strong>procédés de fabrication</strong>.<br>
+                <strong>Mon objectif :</strong> apprendre pour <strong>concevoir des solutions</strong> mécaniques 
+                <strong>fiables</strong> et <strong>innovantes</strong>.
+            </p>
+
+
+            <div class="video-presentation">
+              <h3>Ma vidéo de présentation</h3>
+              <video controls>
+                <source src="Sejourne_Emilien_video-PPP_S4.mp4" type="video/mp4">
+                <source src="Sejourne_Emilien_video-PPP_S4.webm" type="video/webm">
+                Votre navigateur ne supporte pas la lecture vidéo.
+              </video>
+            </div>
+          </div>
+
+          <div class="photo">
+            <img src="photo_a_propo_de_moi.JPG" alt="Photo d'Émilien">
+          </div>         
+        </div>
+      </section>
+
+      <!-- 3. ACTIVITÉS -->
+      <section id="activites" class="panel panel-3">
+        <div class="activities-inner">
+          <h2>Mes activités</h2>
+
+          <p class="activities-intro">
+            Un aperçu de mes réalisations professionnelles, personnelles et académiques.
+          </p>
+
+          <div class="activities-grid">
+
+            <!-- Carte 1 : PRO -->
+            <a href="activites-professionnelles.html" class="activity-card">
+              <div class="activity-image pro"></div>
+              <div class="activity-content">
+                <h3>Professionnelles</h3>
+                <p>
+                  Projets réalisés en entreprise : R&amp;D, industrialisation, méthodes…
+                </p>
+                <span class="activity-link">Découvrir →</span>
+              </div>
+            </a>
+
+            <!-- Carte 2 : PERSO -->
+            <a href="activites-personnelles.html" class="activity-card">
+              <div class="activity-image perso"></div>
+              <div class="activity-content">
+                <h3>Personnelles</h3>
+                <p>
+                  Projets mécaniques à titre personnel : kart cross, impression 3D, RC…
+                </p>
+                <span class="activity-link">Découvrir →</span>
+              </div>
+            </a>
+
+            <!-- Carte 3 : ACADÉMIQUES -->
+            <a href="activites-academiques.html" class="activity-card">
+              <div class="activity-image acad"></div>
+              <div class="activity-content">
+                <h3>Académiques</h3>
+                <p>
+                  Travaux réalisés à l’IUT : projets de groupe, études, validations.
+                </p>
+                <span class="activity-link">Découvrir →</span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- 4) CONTACT -->
+      <section id="contact" class="panel panel-4">
+          <div class="contact-inner">
+              <h2>Me contacter</h2>
+              <p class="contact-text">Pour me joindre facilement :</p>
+
+              <div class="contact-icons">
+                  <a href="mailto:sejourne.emilien@orange.fr" class="icon">
+                      <i class="fas fa-envelope"></i>
+                  </a>
+
+                  <a href="https://www.linkedin.com/in/emilien-s%C3%A9journ%C3%A9-71bb44277/" target="_blank" class="icon">
+                      <i class="fab fa-linkedin"></i>
+                  </a>
+              </div>
+
+              <p class="thanks">Merci d’avoir pris le temps de me découvrir ! </p>
+              <img src="signature.png" alt="Signature" class="contact-signature">
+
+          </div>
+      </section>
+
+
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
