@@ -188,19 +188,16 @@ nav a:hover, nav a.active{ color: var(--accent); }
 /* Conteneur responsive pour la vidéo YouTube */
 .youtube-container {
   margin-top: 1.5rem;
-  display: flex;
-  justify-content: center;
+  text-align: center;   /* pour centrer l'iframe */
 }
 
+/* style visuel seulement */
 .youtube-container iframe {
-  width: 100%;
-  max-width: 1200px;
-  aspect-ratio: 16 / 9;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  display: block;
   border: none;
 }
+
 
 
 
