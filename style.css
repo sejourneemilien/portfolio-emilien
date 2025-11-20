@@ -561,38 +561,15 @@ body.perso-page .perso-panel-2 {
   }
 }
 
-.kart-tags {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin: 1rem 0 1.4rem 0;
-  padding: 0;
-}
+/* --- Mots-clés KART CROSS (section perso panel 4) --- */
 
-.kart-tags li {
-  font-size: 0.9rem;
-  padding: 0.35rem 0.75rem;
-  border-radius: 999px;
-  background: #e3f3ff;
-  color: #12527c;
-  font-weight: 600;
-  border: 1px solid #b3d8ff;
-}
-
-/* --- Bloc tags kart placé au centre bas de la section 1 --- */
+/* Conteneur qui centre la liste sous le titre */
 .kart-tags-wrapper {
-  position: absolute;      /* sort du flux normal */
-  left: 50%;
-  top: 75%;               /* ajuste la hauteur ici (65–70% selon ton goût) */
-  transform: translateX(-50%);
+  width: 100%;
   display: flex;
   justify-content: center;
-  width: 100%;
-  margin: 0;
-  z-index: 20;            /* au-dessus du fond, sous les cartes au pire */
+  margin: 0.8rem 0 1.4rem 0; /* espace au-dessus et en dessous */
 }
-
 
 /* Liste des tags */
 .kart-tags {
@@ -601,7 +578,8 @@ body.perso-page .perso-panel-2 {
   gap: 0.6rem;
   flex-wrap: wrap;
   padding: 0;
-  margin: 0;
+  margin: 1rem auto 1.4rem auto; /* centre le bloc lui-même */
+  justify-content: center;        /* centre les tags dans la ligne */
 }
 
 /* Style des tags individuels */
@@ -613,6 +591,29 @@ body.perso-page .perso-panel-2 {
   border: 1px solid #b3d8ff;
   padding: 0.35rem 0.75rem;
   font-size: 0.95rem;
+}
+
+
+
+
+.perso-tags {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0 1.2rem 0;
+  padding: 0;
+}
+
+.perso-tags li {
+  font-size: 0.9rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: #e3f3ff;
+  color: #12527c;
+  font-weight: 600;
+  border: 1px solid #b3d8ff;
 }
 
 
@@ -632,7 +633,7 @@ body.perso-page .perso-panel-3 {
 
 .rc-header {
   text-align: center;
-  margin-top: 3.5rem;     /* + espace sous le menu */
+  margin-top: 1rem;     /* + espace sous le menu */
   margin-bottom: 2.5rem;
 }
 
@@ -827,12 +828,12 @@ body.perso-page .perso-panel-4 {
 
 /* Déplacement de la carte GAUCHE : plus haut et plus à gauche */
 .kart-left {
-  transform: translate(-100px, -90px); /* -80px = plus à gauche, -70px = plus haut */
+  transform: translate(-150px, -180px); /* -80px = plus à gauche, -70px = plus haut */
 }
 
 /* Déplacement de la carte DROITE : plus haut et plus à droite */
 .kart-right {
-  transform: translate(100px, -90px); /* +50px = vers la droite, -40px = vers le haut */
+  transform: translate(150px, -180px); /* +50px = vers la droite, -40px = vers le haut */
 }
 
 /* ===== CARTE MENTALE KART CROSS ===== */
